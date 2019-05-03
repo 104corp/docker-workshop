@@ -32,3 +32,6 @@ Desktop.ini
 
 # vuepress dist files
 /dist
+
+# Vagrant files
+/.vagrant
