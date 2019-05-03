@@ -1,0 +1,9 @@
+title: Docker Workshop
+description: Docker 工作坊
+base: /docker-workshop/
+dest: dist
+themeConfig:
+  repo: 104corp/docker-workshop
+  repoLabel: GitHub
+  editLinks: true
+  editLinkText: 編輯這個頁面
