@@ -61,3 +61,7 @@ vagrant ssh
 ### AWS
 
 除了上述方法外，也可以使用 [RancherOS](https://github.com/rancher/os) 的 AMI。
+
+## 其他參考資源
+
+* [Docker cheat sheet](https://github.com/wsargent/docker-cheat-sheet)
