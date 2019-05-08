@@ -1,6 +1,6 @@
 # Hello Docker
 
-從這個練習，可以理解：
+從這個練習，可以了解：
 
 * image 與 container 的差異
 * image 與 container 之間的依賴關係

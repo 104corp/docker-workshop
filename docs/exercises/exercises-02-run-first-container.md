@@ -1,8 +1,8 @@
-# Run Command
+# Run First Container
 
-練習完 [Hello Docker](exercises-01-hello-docker.md) 後，再練習此題目，可以理解：
+練習完 [Hello Docker](exercises-01-hello-docker.md) 後，再練習此題目，可以了解：
 
-* run 指令背後實際做的事
+* `docker run` 指令背後實際做的事
 
 ```bash
 # 確認 image
