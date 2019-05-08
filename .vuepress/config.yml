@@ -3,6 +3,11 @@ description: Docker 工作坊
 base: /docker-workshop/
 dest: dist
 themeConfig:
+  sidebar:
+    - title: Exercises
+      children:
+        - /docs/exercises/exercises-01-hello-docker
+        - /docs/exercises/exercises-02-run-command
   repo: 104corp/docker-workshop
   repoLabel: GitHub
   editLinks: true
