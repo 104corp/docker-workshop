@@ -12,6 +12,7 @@ themeConfig:
         - /docs/exercises/exercises-04-run-command
         - /docs/exercises/exercises-05-volume-mapping
         - /docs/exercises/exercises-06-environment
+        - /docs/exercises/exercises-07-link-container
   repo: 104corp/docker-workshop
   repoLabel: GitHub
   editLinks: true
