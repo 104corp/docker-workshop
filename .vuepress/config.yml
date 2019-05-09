@@ -11,8 +11,9 @@ themeConfig:
         - /docs/exercises/exercises-03-port-forwording
         - /docs/exercises/exercises-04-run-command
         - /docs/exercises/exercises-05-volume-mapping
-        - /docs/exercises/exercises-06-environment
-        - /docs/exercises/exercises-07-link-container
+        - /docs/exercises/exercises-06-using-docker-instead-install-tools
+        - /docs/exercises/exercises-11-environment
+        - /docs/exercises/exercises-12-link-container
     - /docs/command-tricks
   repo: 104corp/docker-workshop
   repoLabel: GitHub
