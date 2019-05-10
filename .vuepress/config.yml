@@ -14,9 +14,10 @@ themeConfig:
         - /docs/exercises/exercises-06-using-docker-instead-install-tools
         - /docs/exercises/exercises-11-environment
         - /docs/exercises/exercises-12-link-container
-        - /docs/exercises/exercises-13-persistent-image.md
-        - /docs/exercises/exercises-14-persistent-container-filesystem.md
-        - /docs/exercises/exercises-15-volume-advanced.md
+        - /docs/exercises/exercises-13-persistent-image
+        - /docs/exercises/exercises-14-persistent-container-filesystem
+        - /docs/exercises/exercises-15-volume-advanced
+        - /docs/exercises/exercises-16-backup-database
     - /docs/command-tricks
   repo: 104corp/docker-workshop
   repoLabel: GitHub
