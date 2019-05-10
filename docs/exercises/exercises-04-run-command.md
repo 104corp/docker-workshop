@@ -49,6 +49,12 @@ docker run -d --name my-web -p 8080:80 nginx
 
 > **注意**：`--rm` 與 `-d|--detach` 兩個選項是互相衝突的。
 
+### `docker container exec`
+
+在執行中的 container 上，執行新的指令。
+
+> 參數 `-i` 與 `-t`，跟 `docker run` 的意義是一樣的，就不多做解釋了。
+
 ## References
 
 * [Nginx image](https://hub.docker.com/_/nginx)

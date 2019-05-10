@@ -8,7 +8,7 @@
 ```bash
 # 確認本機的 image / container 狀態為何
 docker image ls
-docker container ls
+docker container ls -a
 
 # 首次執行官方的 hello world
 docker run --name hello hello-world
@@ -67,6 +67,8 @@ IMAGE 可以是 tag name，或是 SHA1。其他地方所表示的 IMAGE 亦同�
 ### `docker container ls`
 
 列出正在執行中的 container。
+
+* `-a|--all` 列出所有的 container
 
 ### `docker container rm`
 

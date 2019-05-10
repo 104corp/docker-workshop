@@ -48,9 +48,9 @@ docker pull busybox:latest
 docker container create [OPTIONS] IMAGE [COMMAND] [ARG...]
 ```
 
-* `--name` 參數同 `docker run`，指定 container 名稱。
-* `-i|--interactive` 是讓 container 的標準輸入保持打開。
-* `-t|--tty` 參數是告訴 Docker 要分配一個虛擬終端機（pseudo-tty）並綁定到 container 的標準輸入上。
+* `--name` 參數同 `docker run`，指定 container 名稱
+* `-i|--interactive` 是讓 container 的標準輸入保持打開
+* `-t|--tty` 參數是告訴 Docker 要分配一個虛擬終端機（pseudo-tty）並綁定到 container 的標準輸入上
 
 ### `docker container start`
 
