@@ -8,7 +8,7 @@ themeConfig:
       children:
         - /docs/exercises/exercises-01-hello-docker
         - /docs/exercises/exercises-02-run-first-container
-        - /docs/exercises/exercises-03-port-forwording
+        - /docs/exercises/exercises-03-port-forwarding
         - /docs/exercises/exercises-04-run-command
         - /docs/exercises/exercises-05-volume-mapping
         - /docs/exercises/exercises-06-using-docker-instead-install-tools

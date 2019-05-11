@@ -6,19 +6,21 @@
 
 ```
 # 建立 network
-docker network create my-network
+docker network create my-net
 
 # 啟動 nginx
-docker run -d --name my-web --network my-network nginx
+docker run -d --name my-web --network my-net -p 8080:80 nginx
 
-# 啟動 busybox
-docker run --rm -it --network my-network busybox
+# 啟動並進入 busybox
+docker run --rm -it --network my-net busybox
 
 # 從 busybox 存取 nginx 的服務（使用 my-web 作為 hostname）
 wget my-web -O -
 ```
 
 這個練習題目，也可以解決 [Run Command](exercises-04-run-command.md) 環境設定問題。這樣就能使用 hostname 來連到指定的 container 了。
+
+練習中會發現一個奇妙的事：使用瀏覽器在連接 Nginx 時，必須使用 8080 port，但進容器連結 Nginx，則得使用 80 port。這是虛擬機與 [Port Forwarding](exercises-03-port-forwarding.md) 的特性，必須要清楚了解，使用 Docker 或虛擬機才不會搞混目前要使用什麼連接埠。
 
 ## 指令說明
 
