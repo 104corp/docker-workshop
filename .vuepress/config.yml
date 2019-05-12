@@ -24,6 +24,7 @@ themeConfig:
       children:
         - /docs/exercises/exercises-21-docker-build
         - /docs/exercises/exercises-22-optimizing-dockerfile
+        - /docs/exercises/exercises-23-multi-stage-build
     - /docs/command-tricks
   repo: 104corp/docker-workshop
   repoLabel: GitHub

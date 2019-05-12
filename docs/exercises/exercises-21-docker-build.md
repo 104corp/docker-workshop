@@ -115,7 +115,6 @@ CMD ["php", "artisan", "serve", "--host", "0.0.0.0", "--port", "8080"]
 但執行的時候可能會發現某些問題，如必要的環境變數 `APP_KEY` 沒有設定，於是設定給它：
 
 ```dockerfile
-# Use only development environment
 ENV APP_KEY "base64:ETwf93f5m2aTbg+YxukR3hEiAHzmvKEi0mt605TkMfU="
 ```
 
