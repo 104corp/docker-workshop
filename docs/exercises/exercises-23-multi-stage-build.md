@@ -23,6 +23,8 @@ COPY . .
 
 RUN composer install
 
+EXPOSE 8080
+
 CMD ["php", "artisan", "serve", "--host", "0.0.0.0", "--port", "8080"]
 ```
 
@@ -62,6 +64,8 @@ WORKDIR /source
 
 COPY --from=php_builder /source/vendor ./vendor 
 COPY . .
+
+EXPOSE 8080
 
 CMD ["php", "artisan", "serve", "--host", "0.0.0.0", "--port", "8080"]
 ```
@@ -126,6 +130,8 @@ COPY --from=npm_builder /source/public/css ./public/css
 COPY --from=npm_builder /source/public/mix-manifest.json ./public
 
 COPY . .
+
+EXPOSE 8080
 
 CMD ["php", "artisan", "serve", "--host", "0.0.0.0", "--port", "8080"]
 ```

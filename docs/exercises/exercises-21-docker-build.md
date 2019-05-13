@@ -30,9 +30,9 @@ run:
 
 1.  準備一個可以成功 build 的 Dockerfile
 2.  撰寫 Dockerfile 三循環
-    1.  新增 Dockerfile 指令，包括安裝服務、修改服務設定、設定 Docker 參數等
-    2.  執行 Build ，並產生 Container 驗證是否正確
-    3.  優化 Dockerfile
+    1.  新增 Dockerfile 指令
+    2.  執行 Build，驗證是否正確
+    3.  [最佳化 Dockerfile](exercises-22-optimizing-dockerfile.md)
 
 以下會用上面的方法，來描述如何使用 PHP built-in server，來寫一個 Laravel Skeleton 的 Dockerfile。
 
@@ -120,6 +120,14 @@ ENV APP_KEY "base64:ETwf93f5m2aTbg+YxukR3hEiAHzmvKEi0mt605TkMfU="
 
 最後重新建置並執行，即可正常運作。
 
+## 設定 EXPOSE 資訊
+
+`EXPOSE` 資訊指的是此服務，開放給外部服務的 port 為何，這是 image 上的 metadata。這能提供開發人員或維運人員有效的資訊，包括某些指令也會使用到此 metadata。
+
+```dockerfile
+EXPOSE 8080
+```
+
 ## Dockerfile
 
 ```dockerfile
@@ -134,6 +142,8 @@ COPY . .
 RUN composer install
 
 ENV APP_KEY "base64:ETwf93f5m2aTbg+YxukR3hEiAHzmvKEi0mt605TkMfU="
+
+EXPOSE 8080
 
 CMD ["php", "artisan", "serve", "--host", "0.0.0.0", "--port", "8080"]
 ```

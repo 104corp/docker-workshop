@@ -16,6 +16,8 @@ RUN composer install
 # Use only development environment
 ENV APP_KEY "base64:ETwf93f5m2aTbg+YxukR3hEiAHzmvKEi0mt605TkMfU="
 
+EXPOSE 8080
+
 CMD ["php", "artisan", "serve", "--host", "0.0.0.0", "--port", "8080"]
 ```
 
@@ -158,6 +160,8 @@ RUN set -xe && \
 COPY . .
 
 RUN composer install
+
+EXPOSE 8080
 
 CMD ["php", "artisan", "serve", "--host", "0.0.0.0", "--port", "8080"]
 ```
