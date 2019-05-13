@@ -7,7 +7,7 @@ themeConfig:
     - title: Docker Basic Exercises Part 1
       children:
         - /docs/exercises/exercises-01-hello-docker
-        - /docs/exercises/exercises-02-run-first-container
+        - /docs/exercises/exercises-02-understand-docker-run
         - /docs/exercises/exercises-03-port-forwarding
         - /docs/exercises/exercises-04-run-command
         - /docs/exercises/exercises-05-volume-mapping
