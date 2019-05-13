@@ -28,11 +28,19 @@ CMD ["php", "artisan", "serve", "--host", "0.0.0.0", "--port", "8080"]
 * `ENV` 使用了機敏資訊（key），代表這會在原始碼裡出現
 * 安裝過程「可能」會有不必要的檔案（指 `composer install` 會安裝測試套件）
 
+因此會需要最佳化 Dockerfile，方向有下列幾個：
+
+* 減少 build image 的時間，以調整流程為主
+  + 也可參考 [.dockerignore](https://docs.docker.com/engine/reference/builder/#dockerignore-file)
+* 減少 image 空間與 commit，以調整流程為主
+  + 也可參考 [Alpine Linux](https://hub.docker.com/_/alpine/) 或 [Multi-stage Builds](https://docs.docker.com/develop/develop-images/multistage-build/)
+* 加強 image 的 SaaS 特性，可參考 [The Twelve Factors](https://12factor.net/)
+
 ## 減少 build context 的大小
 
 Build context 是執行 build 一開始，會把檔案傳給 Docker Daemon 準備做 build。
 
-因為有些檔案跟建置無關，如：
+但因為有些檔案跟建置無關，如：
 
 * `.vagrant`
 
@@ -118,7 +126,7 @@ docker run --env-file .env laravel
 
 ## 精簡 AUFS 的 commit 數
 
-Docker 的 commit 數量是有限制的，為 127 個。這是精簡的理由之一。另一個更重大的理由是：因為 AUFS 系統特性，只要 commit 數越多，檔案系統的操作就會越慢。因此要想辦法來減少 commit 數。
+Docker 的 commit 數量是有限制的，為 127 個，這是精簡的理由之一。另一個更重大的理由是：因為 AUFS 系統特性，只要 commit 數越多，檔案系統的操作就會越慢，因此更需要想辦法來減少 commit 數。
 
 以本例來說，把最上面安裝 composer 的過程合併，不失為一個好方法：
 
@@ -156,5 +164,6 @@ CMD ["php", "artisan", "serve", "--host", "0.0.0.0", "--port", "8080"]
 
 ## References
 
+* [Docker Performance Improvement: Tips and Tricks](https://stackify.com/docker-performance-improvement-tips-and-tricks/)
 * [Use the AUFS storage driver](https://docs.docker.com/storage/storagedriver/aufs-driver/)
 * [DOCKER基础技术：AUFS](https://coolshell.cn/articles/17061.html)
