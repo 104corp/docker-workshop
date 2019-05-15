@@ -4,7 +4,7 @@
 
 * 如何在 container 設定環境變數
 
-```
+```bash
 # 啟動 mysql 並給予 password 環境變數 
 docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=password mysql
 

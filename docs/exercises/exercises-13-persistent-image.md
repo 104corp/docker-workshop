@@ -5,7 +5,7 @@
 * 如何把 Docker 列表裡面的 image 轉換成打包檔
 * 如何把打包檔轉回 Docker 列表裡面的 image
 
-```
+```bash
 # 下載 busybox image
 docker image pull busybox
 

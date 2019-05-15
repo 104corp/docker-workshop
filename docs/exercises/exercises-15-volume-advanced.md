@@ -5,7 +5,7 @@
 * 如何建立 volume
 * 如何將 volume 的目錄綁定到 container 裡
 
-```
+```bash
 # 建立 volume，並命名為 code
 docker volume create --name code
 docker volume ls

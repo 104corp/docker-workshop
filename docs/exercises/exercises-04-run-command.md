@@ -6,7 +6,7 @@
 * 如何「進入」container，並處理裡面的設定與檔案等
 * Container 的「一次性」特性
 
-```
+```bash
 # 查看兩個不同版本的 image 的 php 版本
 docker run --rm -it php:7.1 php -v
 docker run --rm -it php:7.2 php -v

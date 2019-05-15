@@ -48,13 +48,13 @@ services:
 
 先啟動依賴的容器：
 
-```
+```bash
 docker-compose up -d hub chrome firefox
 ```
 
 接著就能執行測試：
 
-```
+```bash
 docker-compose run --rm --no-deps tester
 ```
 

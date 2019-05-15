@@ -33,7 +33,7 @@ docker pull [OPTIONS] NAME[:TAG|@DIGEST]
 
 TAG 若沒有給的話，預設會使用 latest，意指下面這兩個指令是等價的：
 
-```
+```bash
 docker pull busybox
 docker pull busybox:latest
 ```

@@ -5,7 +5,7 @@
 * 如何把 Docker 列表裡面的 container 的檔案結構轉換成打包檔
 * 如何把檔案結構打包檔轉回 Docker 列表裡面的 image
 
-```
+```bash
 # 執行一個 container
 docker run -it --name mycontainer busybox
 
@@ -48,7 +48,7 @@ docker image import [OPTIONS] file|URL|- [REPOSITORY[:TAG]]
 
 類似 load，使用導入（`<`）來讀取檔案內容，但它沒有選項可以取代導入，而是改成使用參數的方法。下面是使用導入與不使用的對照範例：
 
-```
+```bash
 docker image import myimage < my-export.tar 
 docker image import my-export.tar myimage 
 ```

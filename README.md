@@ -86,3 +86,19 @@ vagrant ssh
 ### AWS
 
 除了上述方法外，也可以在 AWS 上使用 [RancherOS](https://github.com/rancher/os) 的 AMI。
+
+## 預載 Image
+
+若知道如何使用 docker 指令下載 image 的話，可以先執行下面這些指令，先下載比較大的 image，避免當天大家都在下載造成網路過慢。
+
+```bash
+docker pull composer:1.8
+docker pull gradle:5.4-alpine
+docker pull maven:3.6-alpine
+docker pull mysql
+docker pull nginx
+docker pull node:10.15-alpine
+docker pull selenium/hub:3.141.59-iron
+docker pull selenium/node-chrome-debug:3.141.59-iron
+docker pull selenium/node-firefox-debug:3.141.59-iron
+```
