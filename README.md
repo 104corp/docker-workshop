@@ -8,10 +8,11 @@
 
 * 主要使用 command line 操作，shell 會以 `bash` 為主
 * 文件會以 Mac / Linux 環境為主做說明，不保證 Windows 系統完全可用
+* 大多 image 裡面的 user 都會是 root，包括執行 docker 也需要 root（Linux）。為方便入門為前提，會以 root 執行來教學 
 
-## 直接在系統上安裝 Docker 環境
+## 直接在原生系統上安裝 Docker 環境
 
-不同環境有不同的安裝方法，但最後驗證是否安裝成功，可以打開終端機輸入下面指令：
+不同環境的安裝方法當然是不同的，但最後驗證是否安裝成功，可以打開終端機輸入下面指令：
 
 ```
 $ docker ps
@@ -102,3 +103,7 @@ docker pull selenium/hub:3.141.59-iron
 docker pull selenium/node-chrome-debug:3.141.59-iron
 docker pull selenium/node-firefox-debug:3.141.59-iron
 ```
+
+## References
+
+* [Docker Tutorials and Labs](https://github.com/docker/labs)
