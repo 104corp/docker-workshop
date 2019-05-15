@@ -14,7 +14,7 @@ docker container rm -vf my-web
 
 ### `docker run`
 
-* `-d|--detach` 背景執行 container
+* `-d|--detach` 背景執行 container。已經跑在前景的 container 可以用 Ctrl + P、Ctrl + Q 組合鍵 detach；接著可以再用 `docker attach` 讓它回到前景
 * `-p|--publish` 把 container 的 port 公開到 host 上，格式為 `[IP]:[HOST_PORT]:[CONTAINER_PORT]`
 
 ### `docker container stop`
