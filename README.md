@@ -7,7 +7,7 @@
 開始前，先對此工作坊做點基本說明：
 
 * 主要使用 command line 操作，shell 會以 `bash` 為主
-* 文件會以 Mac / Linux 環境為主做說明，Windows 10 應該會有 90% 相容性，但不保證完全可用。
+* 文件會以 Mac / Linux 環境為主做說明，不保證 Windows 系統完全可用
 
 ## 直接在系統上安裝 Docker 環境
 
@@ -53,7 +53,7 @@ sudo usermod -aG docker your-user
 
 ### Docker Machine
 
-[Docker Machine](https://docs.docker.com/machine/) 是建立 Docker 環境的首選，預設的 provider 包括以下選擇：
+[Docker Machine](https://docs.docker.com/machine/) 是建立 Docker 虛擬機的首選，預設的 provider 包括以下選擇：
 
 * [VirtualBox](https://docs.docker.com/machine/drivers/virtualbox/)
 * [Hyper-V](https://docs.docker.com/machine/drivers/hyper-v/)（Windows only）
@@ -69,7 +69,7 @@ docker-machine create -d virtualbox my-docker
 # 查看這台機器相關的環境參數
 docker-machine env my-docker
 # export 環境參數，執行 docker 指令即可改直接連線到虛擬機上
-eval (docker-machine env my-docker)
+eval $(docker-machine env my-docker)
 ```
 
 ### Vagrant
