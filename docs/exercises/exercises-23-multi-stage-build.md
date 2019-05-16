@@ -141,3 +141,10 @@ CMD ["php", "artisan", "serve", "--host", "0.0.0.0", "--port", "8080"]
 ## References
 
 * [Use multi-stage builds](https://docs.docker.com/develop/develop-images/multistage-build/)
+
+其他最佳化後的 Dockerfile 範例參考：
+
+* [Docker Phalcon](https://github.com/MilesChou/docker-phalcon)
+* [PHP with XDebug](https://github.com/MilesChou/docker-xdebug)
+* [Docker Image with PHP extensions](https://github.com/104corp/docker-php-testing)
+* [Laravel Eloquent Generator](https://github.com/104corp/laravel-eloquent-generator)
