@@ -10,8 +10,8 @@
 # 查看不同版本的 image 的程式版本
 docker run --rm -it php:7.1 php -v
 docker run --rm -it php:7.2 php -v
-docker run --rm -it node:8 nodev -v
-docker run --rm -it node:10 nodev -v
+docker run --rm -it node:8 node -v
+docker run --rm -it node:10 node -v
 
 
 # 啟動 nginx

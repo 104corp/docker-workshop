@@ -16,7 +16,7 @@ touch somefile
 docker container export mycontainer > my-export.tar
 
 # 從 tar 導入檔案系統
-docker image import myimage < my-export.tar
+docker image import - myimage < my-export.tar
 
 # 查看 image 
 docker image ls

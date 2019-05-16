@@ -7,11 +7,11 @@
 
 ```bash
 # 執行多次，port 都不會打架
-docker run -d --name my-web nginx
-docker run -d --name my-web nginx
-docker run -d --name my-web nginx
-docker run -d --name my-web nginx
-docker run -d --name my-web nginx
+docker run -d nginx
+docker run -d nginx
+docker run -d nginx
+docker run -d nginx
+docker run -d nginx
 
 docker run -d --name my-web -p 8080:80 nginx
 docker container stop my-web
