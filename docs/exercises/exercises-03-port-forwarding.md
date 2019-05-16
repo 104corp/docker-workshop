@@ -2,9 +2,17 @@
 
 練習此題，可以了解：
 
+* Docker Application 隔離特性
 * 如何透過 port 存取 container 提供的服務
 
 ```bash
+# 執行多次，port 都不會打架
+docker run -d --name my-web nginx
+docker run -d --name my-web nginx
+docker run -d --name my-web nginx
+docker run -d --name my-web nginx
+docker run -d --name my-web nginx
+
 docker run -d --name my-web -p 8080:80 nginx
 docker container stop my-web
 docker container rm -vf my-web
