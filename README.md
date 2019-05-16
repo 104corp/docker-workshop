@@ -8,7 +8,9 @@
 
 * 主要使用 command line 操作，shell 會以 `bash` 為主
 * 文件會以 Mac / Linux 環境為主做說明，不保證 Windows 系統完全可用
-* 大多 image 裡面的 user 都會是 root，包括執行 docker 也需要 root（Linux）。為方便入門為前提，會以 root 執行來教學 
+* 大多 image 裡面的 user 都會是 root，包括執行 docker 也需要 root（Linux）。為方便入門為前提，會以 root 執行來教學
+
+> GUI 可以參考 [Portainer](https://www.portainer.io/)、[Kitematic](https://kitematic.com/)、[DockStation](https://dockstation.io/)，但本 workshop 說明不會討論 GUI。
 
 ## 直接在原生系統上安裝 Docker 環境
 
