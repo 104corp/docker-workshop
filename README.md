@@ -50,7 +50,7 @@ sudo usermod -aG docker your-user
 
 ## 使用虛擬機安裝 Docker 環境
 
-有時候因為特殊理由，可能會不想或無法在本機安裝 Docker，這時可以考慮使用虛擬機安裝。
+有時候因為特殊理由，可能會不想或無法（如 Windows 7）在本機安裝 Docker，這時可以考慮使用虛擬機安裝。
 
 ### Docker Machine
 
@@ -87,6 +87,19 @@ vagrant ssh
 ### AWS
 
 除了上述方法外，也可以在 AWS 上使用 [RancherOS](https://github.com/rancher/os) 的 AMI。
+
+另一個方法是使用 [AWS Cloud9](https://aws.amazon.com/tw/cloud9/) 服務：
+
+1.  起 Cloud9 服務，設定直接用預設值即可
+2.  在 Cloud9 服務，下 `curl ifconfig.co` 指令取得公開 IP：
+3.  因需要練習 port forwarding，所以必須到 EC2 服務裡，找到對應的 instance，再設定 security group
+
+### Play with Docker
+
+上述方法全部都不行的話，最後一個就是使用 [Play with Docker](https://labs.play-with-docker.com/) 服務，只要準備好 DockerHub 的帳號，即可使用。因為它是一個使用 [DinD](https://hub.docker.com/_/docker/) 做成的線上服務，所以會有兩個問題：
+
+* 它並沒有保證系統一直都可以用，所以什麼時候會壞，這是無法預期的
+* 因為使用 DinD，所以跟 port forwarding 相關的練習是無法使用瀏覽器測試的，不過可以使用 curl 指令測試
 
 ## 預載 Image
 
