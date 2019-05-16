@@ -113,8 +113,11 @@ docker pull gradle:5.4-alpine
 docker pull maven:3.6-alpine
 docker pull mysql
 docker pull nginx
-docker pull node
+docker pull node:8
+docker pull node:10
 docker pull node:10.15-alpine
+docker pull php:7.1
+docker pull php:7.2
 docker pull php:7.3-alpine
 docker pull selenium/hub:3.141.59-iron
 docker pull selenium/node-chrome-debug:3.141.59-iron

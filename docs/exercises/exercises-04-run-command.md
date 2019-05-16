@@ -7,9 +7,12 @@
 * Container 的「一次性」特性
 
 ```bash
-# 查看兩個不同版本的 image 的 php 版本
+# 查看不同版本的 image 的程式版本
 docker run --rm -it php:7.1 php -v
 docker run --rm -it php:7.2 php -v
+docker run --rm -it node:8 nodev -v
+docker run --rm -it node:10 nodev -v
+
 
 # 啟動 nginx
 docker run -d --name my-web -p 8080:80 nginx
