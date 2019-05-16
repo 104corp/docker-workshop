@@ -9,10 +9,10 @@
 docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=password mysql
 
 # 啟動 PHP Interactive shell
-docker run --rm -it -e APP_ENV=testing php
+docker run --rm -it -e NODE_ENV=testing node
 
 # 查看環境變數
-php > echo getenv('APP_ENV');
+> process.env.NODE_ENV
 ```
 
 這個練習題目，是解決 [Run Command](exercises-04-run-command.md) 環境設定問題。與 [Volume Mapping](exercises-05-volume-mapping.md) 類似，同樣的指令可以讓程式取到相同的環境變數，進而執行該環境所應該表現的行為。
