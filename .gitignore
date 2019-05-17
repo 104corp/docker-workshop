@@ -35,3 +35,6 @@ Desktop.ini
 
 # Vagrant files
 /.vagrant
+
+# Gitbook pdf artifacts
+book.pdf

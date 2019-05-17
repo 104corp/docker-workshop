@@ -111,7 +111,7 @@ RUN composer install
 
 ## ENV 改執行階段傳入
 
-[Environment](exercises-11-environment.md) 練習可以傳入指定的環境變數。而 Laravel 使用 `.env` 檔載入環境變數，若要改成由執行階段傳入的話，首先得先把 `.env` 忽略：
+[Environment](exercises-11-environment-variable.md) 練習可以傳入指定的環境變數。而 Laravel 使用 `.env` 檔載入環境變數，若要改成由執行階段傳入的話，首先得先把 `.env` 忽略：
 
 ```
 # .dockerignore

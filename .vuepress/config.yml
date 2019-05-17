@@ -14,7 +14,7 @@ themeConfig:
         - /docs/exercises/exercises-06-using-docker-instead-install-tools
     - title: Docker Basic Exercises Part 2
       children:
-        - /docs/exercises/exercises-11-environment
+        - /docs/exercises/exercises-11-environment-variable
         - /docs/exercises/exercises-12-link-container
         - /docs/exercises/exercises-13-persistent-image
         - /docs/exercises/exercises-14-persistent-container-filesystem
