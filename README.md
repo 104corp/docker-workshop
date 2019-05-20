@@ -16,12 +16,11 @@
 
 不同環境的安裝方法當然是不同的，但最後驗證是否安裝成功，可以打開終端機輸入下面指令：
 
-```
-$ docker ps
-CONTAINER ID    IMAGE   COMMAND CREATED STATUS  PORTS    NAMES
+```bash
+docker run hello-world
 ```
 
-若有正常出現上面表格的話，代表服務有正常啟動，可以開始使用 Docker 了。
+若沒出現錯誤訊息，且有出現 `Hello from Docker!` 的字眼的話，代表服務有正常啟動，可以開始使用 Docker 了。
 
 ### Mac
 
