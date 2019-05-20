@@ -90,6 +90,8 @@ vagrant ssh
 
 除了上述方法外，也可以在 AWS 上使用 [RancherOS](https://github.com/rancher/os) 的 AMI。
 
+#### Cloud9
+
 另一個方法是使用 [AWS Cloud9](https://aws.amazon.com/tw/cloud9/) 服務：
 
 1.  起 Cloud9 服務，設定直接用預設值即可
