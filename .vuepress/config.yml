@@ -1,5 +1,5 @@
 title: Docker Workshop
-description: Docker 工作坊
+description: 手把手帶領大家入門 Docker 世界
 base: /docker-workshop/
 dest: dist
 themeConfig:
