@@ -14,3 +14,11 @@ script:
 - yarn build
 
 cache: yarn
+
+deploy:
+  - provider: pages
+    skip_cleanup: true
+    github_token: ${GITHUB_ACCESS_TOKEN}
+    local_dir: dist
+    on:
+      branch: master
