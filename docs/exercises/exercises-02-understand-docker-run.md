@@ -4,6 +4,8 @@
 
 * `docker run` 指令背後實際做的事
 
+## 指令練習
+
 ```bash
 # 確認 image
 docker image ls
@@ -20,6 +22,8 @@ docker container start -i mycontainer
 # 觀察 container
 docker container ls -a
 ```
+
+> 在執行 container 的過程中，可以使用 `control + p` 與 `control + q` 的連續組合鍵來達成 detach 效果。
 
 ## 指令說明
 
@@ -48,9 +52,9 @@ docker pull busybox:latest
 docker container create [OPTIONS] IMAGE [COMMAND] [ARG...]
 ```
 
-* `--name` 參數同 `docker run`，指定 container 名稱
+* `--name` 選項同 `docker run`，指定 container 名稱
 * `-i|--interactive` 是讓 container 的標準輸入保持打開
-* `-t|--tty` 參數是告訴 Docker 要分配一個虛擬終端機（pseudo-tty）並綁定到 container 的標準輸入上
+* `-t|--tty` 選項是告訴 Docker 要分配一個虛擬終端機（pseudo-tty）並綁定到 container 的標準輸入上
 
 ### `docker container start`
 
@@ -63,6 +67,14 @@ docker container start [OPTIONS] CONTAINER [CONTAINER...]
 * `-i|--interactive` 會把標準輸入綁定到容器上。
 
 > **注意**：這裡的 `--interactive` 參數與 `docker container create` 的 `--interactive` 參數的意義不同，必須要兩個都有打開才能與 `docker run` 的 `--interactive` 產生一樣的效果。
+
+## 總結
+
+在 [Hello Docker](exercises-01-hello-docker.md) 的練習，是使用 `docker run` 直接執行。本次練習則是了解背後它是如何操作不同的元件，來達成執行程式的目的。
+
+`docker run` = `docker image pull` + `docker container create` + `docker container start` 
+
+除此之外，同時也練習了如何使用 `--interactive` 選項與 `--tty` 選項，來進入 container 的環境。
 
 ## References
 

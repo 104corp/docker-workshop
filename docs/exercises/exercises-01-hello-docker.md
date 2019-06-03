@@ -5,6 +5,8 @@
 * image 與 container 的差異
 * image 與 container 之間的依賴關係
 
+## 指令練習
+
 ```bash
 # 確認本機的 image / container 狀態為何
 docker image ls
@@ -81,6 +83,16 @@ docker container rm [OPTIONS] CONTAINER [CONTAINER...]
 CONTAINER 可以是當初 `--name` 參數給的名稱，或是 SHA1。其他地方所表示的 CONTAINER 亦同。
 
 > 同 `docker image rm`，傳入一個以上的 CONTAINER 是可行的。
+
+## 總結
+
+一開始了解 Image 與 Container 之間的差異是很重要的，如此才會理解不同的指令會對應到 Docker 不同的元件。
+
+本練習可了解，這兩個元件關係與差異如下：
+
+* Image 不能修改內容，Container 可以
+* Image 不能拿來執行，Container 可以
+* Container 必須基於 Image 產生
 
 ## References
 

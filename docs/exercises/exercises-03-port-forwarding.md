@@ -2,8 +2,10 @@
 
 練習此題，可以了解：
 
-* Docker Application 隔離特性
-* 如何透過 port 存取 container 提供的服務
+* Docker Container 隔離特性
+* 如何透過 port 存取 Container 提供的服務
+
+## 指令練習
 
 ```bash
 # 執行多次，port 都不會打架
@@ -22,8 +24,10 @@ docker container rm -vf my-web
 
 ### `docker run`
 
-* `-d|--detach` 背景執行 container。已經跑在前景的 container 可以用 Ctrl + P、Ctrl + Q 組合鍵 detach；接著可以再用 `docker attach` 讓它回到前景
+* `-d|--detach` 背景執行 container。
 * `-p|--publish` 把 container 的 port 公開到 host 上，格式為 `[IP]:[HOST_PORT]:[CONTAINER_PORT]`
+
+> 已經跑在前景的 container 可以用 Ctrl + P、Ctrl + Q 組合鍵 detach；接著可以再用 `docker attach` 讓它回到前景
 
 ### `docker container stop`
 
@@ -49,6 +53,10 @@ docker container rm [OPTIONS] CONTAINER [CONTAINER...]
 
 * `-f|--force` 如果是執行中的 container，會強制移除（使用 SIGKILL）
 * `-v|--volumes` 移除分配給 container 的 volume
+
+## 總結
+
+了解 Container 的隔離機制是非常重要的。某種程度上，因為它具備了隔離機制，所以我們才有辦法把它當作「輕量的 VM 」來使用。
 
 ## References
 

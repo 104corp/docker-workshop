@@ -6,6 +6,8 @@
 * 如何「進入」container，並處理裡面的設定與檔案等
 * Container 的「一次性」特性
 
+## 指令練習
+
 ```bash
 # 查看不同版本的 image 的程式版本
 docker run --rm -it php:7.1 php -v
@@ -57,6 +59,13 @@ docker run -d --name my-web -p 8080:80 nginx
 在執行中的 container 上，執行新的指令。
 
 > 參數 `-i` 與 `-t`，跟 `docker run` 的意義是一樣的，就不多做解釋了。
+
+## 總結
+
+配合 [Port Forwarding](exercises-03-port-forwarding.md) 所提到的隔離特性，加上今天的練習，我們可以想像 Docker 可以做到以下應用：
+
+* 隨時切換不同的環境，執行想要測試的指令
+* 可同時在不同環境下測試，而它們各自的狀態都會是互相隔離的
 
 ## References
 
