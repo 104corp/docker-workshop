@@ -2,6 +2,8 @@
 
 這個練習是一個應用題，同時也是一個小技巧，讓開發者不需安裝工具也能使用該工具。
 
+## 指令練習
+
 ```bash
 # 使用 Composer
 alias composer="docker run -it --rm -v \$PWD:/source -w /source composer:1.8"

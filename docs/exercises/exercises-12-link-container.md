@@ -4,6 +4,8 @@
 
 * 如何讓 container 之間互動
 
+## 指令練習
+
 ```bash
 # 建立 network
 docker network create my-net

@@ -4,6 +4,8 @@
 
 * 如何在 container 讀取本機的目錄或檔案
 
+## 指令練習
+
 ```bash
 # 產生一個本機的檔案
 echo "hello world" > ./my-web.html
