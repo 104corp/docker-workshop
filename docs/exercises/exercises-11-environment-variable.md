@@ -10,7 +10,7 @@
 # 啟動 mysql 並給予 password 環境變數 
 docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=password mysql
 
-# 啟動 PHP Interactive shell
+# 啟動 Node.js Interactive shell
 docker run --rm -it -e NODE_ENV=testing node
 
 # 查看環境變數
