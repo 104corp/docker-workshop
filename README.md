@@ -109,17 +109,17 @@ vagrant ssh
 若知道如何使用 docker 指令下載 image 的話，可以先執行下面這些指令，先下載比較大的 image，避免當天大家都在下載造成網路過慢。
 
 ```bash
-docker pull composer:1.8
-docker pull gradle:5.4-alpine
+docker pull composer:1.10
+docker pull gradle:6.5
 docker pull maven:3.6-alpine
 docker pull mysql
 docker pull nginx
-docker pull node:8
-docker pull node:10
-docker pull node:10.15-alpine
-docker pull php:7.1
-docker pull php:7.2
+docker pull node:10-alpine
+docker pull node:12-alpine
+docker pull php:7.2-alpine
 docker pull php:7.3-alpine
+docker pull php:7.4-alpine
+docker pull python:3.8-alpine
 docker pull selenium/hub:3.141.59-iron
 docker pull selenium/node-chrome-debug:3.141.59-iron
 docker pull selenium/node-firefox-debug:3.141.59-iron
