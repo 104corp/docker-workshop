@@ -9,25 +9,25 @@
 
 ```bash
 # 執行多次，port 都不會打架
-docker run -d nginx
-docker run -d nginx
-docker run -d nginx
-docker run -d nginx
-docker run -d nginx
+docker container run -d nginx:alpine
+docker container run -d nginx:alpine
+docker container run -d nginx:alpine
+docker container run -d nginx:alpine
+docker container run -d nginx:alpine
 
-docker run -d --name my-web -p 8080:80 nginx
+docker container run -d --name my-web -p 8080:80 nginx:alpine
 docker container stop my-web
 docker container rm -vf my-web
 ```
 
 ## 指令說明
 
-### `docker run`
+### `docker container run`
 
 * `-d|--detach` 背景執行 container。
 * `-p|--publish` 把 container 的 port 公開到 host 上，格式為 `[IP]:[HOST_PORT]:[CONTAINER_PORT]`
 
-> 已經跑在前景的 container 可以用 Ctrl + P、Ctrl + Q 組合鍵 detach；接著可以再用 `docker attach` 讓它回到前景
+> 已經跑在前景的 container 可以用 Ctrl + P、Ctrl + Q 組合鍵 detach；接著可以再用 `docker container attach` 讓它回到前景
 
 ### `docker container stop`
 

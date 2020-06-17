@@ -8,10 +8,10 @@
 
 ```bash
 # 啟動 mysql 並給予 password 環境變數 
-docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=password mysql
+docker container run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=password mysql
 
 # 啟動 Node.js Interactive shell
-docker run --rm -it -e NODE_ENV=testing node
+docker container run --rm -it -e NODE_ENV=testing node:alpine
 
 # 查看環境變數
 > process.env.NODE_ENV
@@ -21,7 +21,7 @@ docker run --rm -it -e NODE_ENV=testing node
 
 ## 指令說明
 
-### `docker run`
+### `docker container run`
 
 * `-e|--env` 設定該 container 的環境變數
 

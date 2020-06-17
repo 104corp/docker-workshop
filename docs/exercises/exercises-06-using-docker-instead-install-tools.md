@@ -6,30 +6,30 @@
 
 ```bash
 # 使用 Composer
-alias composer="docker run -it --rm -v \$PWD:/source -w /source composer:1.10"
+alias composer="docker container run -it --rm -v \$PWD:/source -w /source composer:1.10"
 
 # 使用 npm
-alias npm="docker run -it --rm -v \$PWD:/source -w /source node:12-alpine npm"
+alias npm="docker container run -it --rm -v \$PWD:/source -w /source node:12-alpine npm"
 
 # 使用 Gradle
-alias gradle="docker run -it --rm -v \$PWD:/source -w /source gradle:6.5 gradle"
+alias gradle="docker container run -it --rm -v \$PWD:/source -w /source gradle:6.5 gradle"
 
 # 使用 Maven
-alias mvn="docker run -it --rm -v \$PWD:/source -w /source maven:3.6-alpine mvn"
+alias mvn="docker container run -it --rm -v \$PWD:/source -w /source maven:3.6-alpine mvn"
 
 # 使用 pip
-alias pip="docker run -it --rm -v \$PWD:/source -w /source python:3.8-alpine pip"
+alias pip="docker container run -it --rm -v \$PWD:/source -w /source python:3.8-alpine pip"
 
 # 使用 Go
-alias go="docker run -it --rm -v \$PWD:/source -w /source golang:1.14-alpine go"
+alias go="docker container run -it --rm -v \$PWD:/source -w /source golang:1.14-alpine go"
 
 # 使用 Mix
-alias mix="docker run -it --rm -v \$PWD:/source -w /source elixir:1.10-alpine mix"
+alias mix="docker container run -it --rm -v \$PWD:/source -w /source elixir:1.10-alpine mix"
 ```
 
 ## 指令說明
 
-### `docker run`
+### `docker container run`
 
 * `-w|--workdir` 指定預設執行的路徑
 

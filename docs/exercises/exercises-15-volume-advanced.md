@@ -13,25 +13,25 @@ docker volume create --name code
 docker volume ls
 
 # 執行 container 綁定 volume，並查看裡面的內容
-docker run --rm -it -v code:/source busybox ls -l /source
+docker container run --rm -it -v code:/source busybox ls -l /source
 
 # 執行 container 做點檔案系統的改變
-docker run --rm -it -v code:/source busybox touch /source/somefile
+docker container run --rm -it -v code:/source busybox touch /source/somefile
 
 # 執行 container 查看 volume 的內容
-docker run --rm -it -v code:/source busybox ls -l /source
+docker container run --rm -it -v code:/source busybox ls -l /source
 
 # 執行 nginx container 綁定到 html 目錄裡
-docker run -d -v code:/usr/share/nginx/html --name my-web nginx
+docker container run -d -v code:/usr/share/nginx/html --name my-web nginx:alpine
 
 # 查看 my-web 容器的 html 目錄
-docker exec -it my-web ls -l /usr/share/nginx/html
+docker container exec -it my-web ls -l /usr/share/nginx/html
 
 # 執行新容器，並把 my-web 容器綁定的 volume 綁到這個容器上
-docker run -d --volumes-from my-web --name my-web2 nginx
+docker container run -d --volumes-from my-web --name my-web2 nginx:alpine
 
 # 查看新的 my-web2 容器的 html 目錄
-docker exec -it my-web2 ls -l /usr/share/nginx/html
+docker container exec -it my-web2 ls -l /usr/share/nginx/html
 ```
 
 ## 指令說明
@@ -42,7 +42,7 @@ docker exec -it my-web2 ls -l /usr/share/nginx/html
 
 * `--name` 指定 volume 名稱
 
-### `docker run`
+### `docker container run`
 
 * `-v|--volume` 指定 volume 到 container 裡面的某個目錄 
 * `--volumes-from` 這個參數要接 container，這可以讓新的 container 去共享舊的 container 的 volume 設定。設定包括 [Volume Mapping](exercises-05-volume-mapping.md)，與今天提到的手動建立方法。

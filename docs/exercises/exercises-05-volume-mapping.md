@@ -11,12 +11,12 @@
 echo "hello world" > ./my-web.html
 
 # 啟動 nginx
-docker run --rm -it -p 8080:80 -v `pwd`/my-web.html:/usr/share/nginx/html/my-web.html nginx
+docker container run --rm -it -p 8080:80 -v `pwd`/my-web.html:/usr/share/nginx/html/my-web.html nginx:alpine
 
 # 查看 http://localhost:8080/my-web.html
 
 # 停止容器再啟動一次
-docker run --rm -it -p 8080:80 -v `pwd`/my-web.html:/usr/share/nginx/html/my-web.html nginx
+docker container run --rm -it -p 8080:80 -v `pwd`/my-web.html:/usr/share/nginx/html/my-web.html nginx:alpine
 
 # 再次查看 http://localhost:8080/my-web.html
 ```
@@ -27,6 +27,6 @@ docker run --rm -it -p 8080:80 -v `pwd`/my-web.html:/usr/share/nginx/html/my-web
 
 ## 指令說明
 
-### `docker run`
+### `docker container run`
 
 * `-v|--volume` 掛載 volume 到這個 container 上，格式為 `[/host]:[/container]:[參數]`

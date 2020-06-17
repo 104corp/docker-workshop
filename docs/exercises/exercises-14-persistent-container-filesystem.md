@@ -9,7 +9,7 @@
 
 ```bash
 # 執行一個 container
-docker run -it --name mycontainer busybox
+docker container run -it --name mycontainer busybox
 
 # 做點檔案系統的改變
 touch somefile

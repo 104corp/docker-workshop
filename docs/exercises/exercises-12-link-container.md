@@ -11,10 +11,10 @@
 docker network create my-net
 
 # 啟動 nginx
-docker run -d --name my-web --network my-net -p 8080:80 nginx
+docker container run -d --name my-web --network my-net -p 8080:80 nginx:alpine
 
 # 啟動並進入 busybox
-docker run --rm -it --network my-net busybox
+docker container run --rm -it --network my-net busybox
 
 # 從 busybox 存取 nginx 的服務（使用 my-web 作為 hostname）
 wget my-web -O -
@@ -42,7 +42,7 @@ docker network create [OPTIONS] NETWORK
 
 * `-d|--driver` 使用的 driver，預設 `bridge`，其他參數可以參考[官網](https://docs.docker.com/network/#network-drivers)
 
-### `docker run`
+### `docker container run`
 
 * `--network` 指定網路設定
 

@@ -10,14 +10,14 @@
 
 ```bash
 # 查看不同版本的 image 的程式版本
-docker run --rm -it php:7.1 php -v
-docker run --rm -it php:7.2 php -v
-docker run --rm -it node:8 node -v
-docker run --rm -it node:10 node -v
+docker run --rm -it php:7.3-alpine php -v
+docker run --rm -it php:7.4-alpine php -v
+docker run --rm -it node:10-alpine node -v
+docker run --rm -it node:12-alpine node -v
 
 
 # 啟動 nginx
-docker run -d --name my-web -p 8080:80 nginx
+docker container run -d --name my-web -p 8080:80 nginx:alpine
 
 # 另外開 terminal
 # 「進入」nginx container
@@ -31,7 +31,7 @@ echo "hello world" > /usr/share/nginx/html/my-web.html
 docker container rm -f my-web
 
 # 重新啟動 nginx
-docker run -d --name my-web -p 8080:80 nginx
+docker container run -d --name my-web -p 8080:80 nginx:alpine
 
 # 查看 http://localhost:8080/my-web.html 網址內容
 ```
@@ -48,7 +48,7 @@ docker run -d --name my-web -p 8080:80 nginx
 
 ## 指令說明
 
-### `docker run`
+### `docker container run`
 
 * `--rm` 當 container 主程序一結束時，立刻移除 container
 
@@ -58,7 +58,7 @@ docker run -d --name my-web -p 8080:80 nginx
 
 在執行中的 container 上，執行新的指令。
 
-> 參數 `-i` 與 `-t`，跟 `docker run` 的意義是一樣的，就不多做解釋了。
+> 參數 `-i` 與 `-t`，跟 `docker container run` 的意義完全相同。
 
 ## 總結
 
