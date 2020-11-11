@@ -1,6 +1,6 @@
 {
     "dependencies": {
-        "vuepress": "^1.0.1"
+        "vuepress": "^1.7.1"
     },
     "scripts": {
         "dev": "vuepress dev .",
