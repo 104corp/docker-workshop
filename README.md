@@ -1,6 +1,6 @@
 # Docker Workshop
 
-[![Build Status](https://travis-ci.com/104corp/docker-workshop.svg?branch=master)](https://travis-ci.com/104corp/docker-workshop)
+[![Deploy to GitHub Pages](https://github.com/104corp/docker-workshop/actions/workflows/deploy.yml/badge.svg)](https://github.com/104corp/docker-workshop/actions/workflows/deploy.yml)
 
 [Docker](https://www.docker.com/) 工作坊。
 

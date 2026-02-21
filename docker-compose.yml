@@ -1,9 +1,8 @@
-version: "3"
 services:
   web:
     build: .
     ports:
-      - 8080:8080
+      - 5173:5173
 
 networks:
   default:

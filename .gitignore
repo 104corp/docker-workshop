@@ -30,8 +30,9 @@ Desktop.ini
 # Node files
 /node_modules
 
-# vuepress dist files
+# VitePress dist / cache files
 /dist
+/.vitepress/cache
 
 # Vagrant files
 /.vagrant
